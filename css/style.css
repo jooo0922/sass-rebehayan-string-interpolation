@@ -1,1 +1,6 @@
-div.box{border:1px solid red}
+div {
+  border-right: 2px solid red;
+}
+p {
+  border-bottom: 5px solid grey;
+}

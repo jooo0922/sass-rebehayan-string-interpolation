@@ -12,8 +12,15 @@
 이렇게 특수한 기호 안에 넣어줘야 함.
 */
 
-$bx: box; // 문자열이 담긴 변수
+// 문자열이 담긴 매개변수를 가져와서 mixin을 만듦.
+@mixin bx($position, $width, $color) {
+  border-#{$position}: $width solid $color;
+}
 
-div.#{$bx} {
-  border: 1px solid red;
+div {
+  @include bx(right, 2px, red);
+}
+
+p {
+  @include bx(bottom, 5px, grey);
 }
